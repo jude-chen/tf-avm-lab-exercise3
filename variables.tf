@@ -32,3 +32,12 @@ variable "storage_account_name" {
   type        = string
   description = "The name of the storage account"
 }
+
+variable "tags" {
+  type = map(string)
+}
+
+variable "address_prefixes" {
+  type        = map(string)
+  description = "The address prefix size for each subnet"
+}
