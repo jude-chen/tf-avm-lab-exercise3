@@ -1,3 +1,10 @@
+resource "random_string" "unique_name" {
+  length  = 3
+  special = false
+  upper   = false
+  numeric = false
+}
+
 module "avm-res-resources-resourcegroup" {
   source  = "Azure/avm-res-resources-resourcegroup/azurerm"
   version = "0.2.2"
@@ -56,7 +63,7 @@ module "storage_account" {
   version = "0.6.3"
 
   location            = var.location
-  name                = var.storage_account_name
+  name                = "${var.storage_account_name_prefix}${random_string.unique_name.id}"
   resource_group_name = module.avm-res-resources-resourcegroup.name
   containers = {
     demo = {

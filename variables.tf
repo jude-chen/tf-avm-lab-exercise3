@@ -28,9 +28,9 @@ variable "subnet_name" {
   description = "The name of the subnet"
 }
 
-variable "storage_account_name" {
+variable "storage_account_name_prefix" {
   type        = string
-  description = "The name of the storage account"
+  description = "The name prefix of the storage account"
 }
 
 variable "tags" {
