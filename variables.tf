@@ -10,10 +10,25 @@ variable "location" {
 
 variable "rg_name_prefix" {
   type        = string
-  description = "fdfdsfds"
+  description = "Prefix of the resource group name"
 }
 
 variable "rg_name_suffix" {
-    type = string
-    description = "fdsfdsfdsf"
+  type        = string
+  description = "Suffix of the resource group name"
+}
+
+variable "address_space" {
+  type        = string
+  description = "The address space for the virtual network"
+}
+
+variable "subnet_name" {
+  type        = string
+  description = "The name of the subnet"
+}
+
+variable "storage_account_name" {
+  type        = string
+  description = "The name of the storage account"
 }
